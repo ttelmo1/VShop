@@ -17,6 +17,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
                 ServerVersion.AutoDetect(mySqlConnection)));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+//duvida: qual a melhor forma para registrar serviços?
+//duvida: remover cache
+//duvida: por qual motivo a brgaap não utiliza UnitOfWork? E como salva as alterações?
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
