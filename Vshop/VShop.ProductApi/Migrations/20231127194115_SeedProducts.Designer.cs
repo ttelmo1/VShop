@@ -10,8 +10,8 @@ using VShop.ProductApi;
 namespace VShop.ProductApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231123203434_inicial")]
-    partial class inicial
+    [Migration("20231127194115_SeedProducts")]
+    partial class SeedProducts
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
